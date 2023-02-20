@@ -30,7 +30,6 @@ jobs:
           username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ env.DOCKERHUB_TOKEN }}
       - name: Build and deploy latest images
-        if: contains(github.ref, 'main')
         run: |
           docker buildx build \
             . \
